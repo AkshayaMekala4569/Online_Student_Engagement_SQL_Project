@@ -3,6 +3,7 @@ GO
 SELECT * FROM courses;
 SELECT * FROM enrollments;
 SELECT * FROM users;
+
 -- overall course completion rate
 SELECT 
     ROUND(
@@ -10,6 +11,7 @@ SELECT
         / COUNT(*), 2
     ) AS course_completion_rate_percent
 FROM enrollments;
+
 -- drop out status
 SELECT 
     ROUND(
@@ -18,6 +20,7 @@ SELECT
     ) AS dropout_rate_percent
 FROM enrollments;
 SELECT completion_status FROM enrollments
+
 
 -- Top 5 Most Active Learners
  SELECT Top 5 u.name AS Top_5_Most_Active_Students, e.progress_percent AS Progress_percentage
